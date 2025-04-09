@@ -1,0 +1,200 @@
+
+.full-page-container {
+  /* New Container for Full Page */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f0ff;
+  color: #333;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Stretch items to fill the width */
+  box-sizing: border-box;
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+}
+
+.results-table-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0; /* Remove border radius */
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* Remove box shadow */
+  padding: 40px; /* Adjust padding as needed */
+  width: 100%; /* Full width */
+  max-width: none; /* Remove max-width */
+  margin: 0; /* Remove margin */
+  flex-grow: 1; /* Take up remaining vertical space */
+  display: flex;
+  flex-direction: column;
+}
+
+.results-table-container h2 {
+  color: #673ab7; /* Primary purple */
+  font-size: 3em;
+  margin-bottom: 30px;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.results-table-container .table-icon {
+  margin-right: 15px;
+}
+
+/* Table Styles */
+.results-table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  flex-grow: 1; /* Allow table to grow */
+  display: center;
+  flex-direction: column; /* Stack the table header and body */
+}
+
+.results-table-container thead {
+  flex-shrink: 0; /* Prevent header from shrinking */
+}
+
+.results-table-container th,
+.results-table-container td {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 16px 18px;
+  text-align: center;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.results-table-container th {
+  background-color: #7e57c2;
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.1em;
+}
+
+.results-table-container th .header-icon {
+  margin-right: 8px;
+  font-size: 0.9em;
+}
+
+.name {
+  color: #673ab7;
+  font-size: large;
+  font-weight: bold;
+}
+
+.score {
+  color: #673ab7;
+  font-size: large;
+  font-weight: bold;
+}
+
+.results-table-container tbody {
+  flex-grow: 1; /* Allow body to grow and scroll */
+  overflow-y: auto; /* Add vertical scroll if needed */
+}
+
+.results-table-container tbody tr:hover {
+  background-color: #f3e5f5; /* Light purple hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.results-table-container td {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/* Highlighted Row */
+.results-table-container .highlighted-row {
+  background-color: #e1bee7 !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+
+.results-table-container .highlighted-row:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Actions Column Styles */
+.results-table-container .download-button {
+  background-color: #5cb85c; /* Success green */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 0.9em;
+  text-decoration: none;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.results-table-container .download-button:hover {
+  background-color: #449d44; /* Darker green */
+  transform: scale(1.05);
+}
+
+.results-table-container .download-button svg {
+  margin-right: 6px;
+  font-size: 0.8em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .results-table-container {
+    padding: 20px;
+  }
+
+  .results-table-container h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .results-table-container th,
+  .results-table-container td {
+    padding: 10px 12px;
+    font-size: 0.8em;
+  }
+
+  .results-table-container .download-button {
+    padding: 8px 12px;
+    font-size: 0.7em;
+  }
+}
+
+/* ResultsTable.css */
+
+/* Button Style (Email Form Link) */
+.results-table-container .email-button {
+  background-color: #3f51b5; /* Another shade of purple/indigo */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  text-decoration: none;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+}
+
+.results-table-container .email-button:hover {
+  background-color: #303f9f; /* Darker indigo */
+  transform: scale(1.05);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+}
+
+.results-table-container .email-button svg {
+  margin-right: 8px;
+  font-size: 1em; /* Make the icon slightly larger */
+}
