@@ -1,15 +1,15 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import { useNavigate, useLocation } from "react-router-dom";
-import "../Auth.css";
-import logo from "../assets/coreopsai.jpg";
-import { backend_url } from "../config";
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { useNavigate, useLocation } from 'react-router-dom';
+import '../Auth.css';
+import logo from '../assets/coreopsai.png';
+import { backend_url } from '../config';
 
 function ResetPassword() {
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [message, setMessage] = useState("");
-  const [error, setError] = useState("");
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
   const navigate = useNavigate();
   const location = useLocation();
   const [id, setid] = useState(null);
@@ -17,22 +17,22 @@ function ResetPassword() {
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
-    const id = searchParams.get("id");
-    const token = searchParams.get("token");
+    const id = searchParams.get('id');
+    const token = searchParams.get('token');
     setToken(token);
     setid(id);
     if (!id || !token) {
-      setError("Invalid or missing reset link parameter");
+      setError('Invalid or missing reset link parameter');
     }
   }, []);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setError("");
-    setMessage("");
+    setError('');
+    setMessage('');
 
     if (password !== confirmPassword) {
-      setError("Passwords do not match");
+      setError('Passwords do not match');
       return;
     }
 
@@ -42,14 +42,14 @@ function ResetPassword() {
         { password }, // Send new password in the request body
         {
           headers: {
-            "Content-Type": "application/json",
+            'Content-Type': 'application/json',
           },
         }
       );
 
       setMessage(response.data.message);
       // Redirect to login after successful password reset
-      setTimeout(() => navigate("/signin"), 2000);
+      setTimeout(() => navigate('/signin'), 2000);
     } catch (error) {
       if (
         error.response &&
@@ -58,7 +58,7 @@ function ResetPassword() {
       ) {
         setError(error.response.data.message);
       } else {
-        setError("Failed to reset password. Please try again.");
+        setError('Failed to reset password. Please try again.');
       }
     }
   };

@@ -1,31 +1,34 @@
-import React, { useState } from "react";
-import axios from "axios";
-import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
-import "../Auth.css";
-import logo from "../assets/coreopsai.jpg";
-import { backend_url } from "../config";
+import React, { useState } from 'react';
+import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom'; // Import useNavigate
+import '../Auth.css';
+import logo from '../assets/coreopsai.png';
+import { backend_url } from '../config';
 
 function ForgotPassword() {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [error, setError] = useState("");
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
   const navigate = useNavigate(); // Use useNavigate hook
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setError("");
-    setMessage("");
+    setError('');
+    setMessage('');
 
     try {
-      const response = await axios.post(`${backend_url}/request-password-reset`, {
-        email,
-      });
+      const response = await axios.post(
+        `${backend_url}/request-password-reset`,
+        {
+          email,
+        }
+      );
       setMessage(response.data.message);
     } catch (err) {
       if (err.response && err.response.data) {
         setError(err.response.data.message);
       } else {
-        setError("An unexpected error occurred. Please try again.");
+        setError('An unexpected error occurred. Please try again.');
       }
     }
   };

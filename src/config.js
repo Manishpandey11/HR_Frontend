@@ -1,1 +1,1 @@
-export const backend_url="http://192.168.10.178:3001/api";
+export const backend_url = 'http://localhost:3001/api';
