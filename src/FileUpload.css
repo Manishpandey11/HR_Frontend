@@ -212,249 +212,146 @@
 /* frontend/src/FileUpload.css */
 
 /* General Styles */
+/* Add these styles to your FileUpload.css file */
+
+/* Enhanced styles for the job description section */
+
+/* Add or update these styles in your FileUpload.css file */
+
 .app-container {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f0ff; /* Light purple */
-  color: #333;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  padding: 20px;
-  box-sizing: border-box;
+  width: 100%;
 }
 
 .file-upload-container {
-  background-color: #f8f0ff;
-  border-radius: 20px;
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-  padding: 50px;
-  width: 90%;
-  max-width: 1000px;
+  max-width: 800px;
+  width: 100%;
   margin: 0 auto;
+  padding: 20px;
 }
 
-/* Hero Section */
+/* Center the hero section text */
 .hero-section {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  padding: 20px 0;
 }
 
 .hero-section h1 {
-  color: #673ab7; /* Primary purple */
-  font-size: 3.2em;
-  font-weight: 700;
-  margin-bottom: 15px;
+  color: #5e35b1;
+  margin-bottom: 10px;
+  font-size: 2.2rem;
 }
 
 .hero-section p {
-  font-size: 1.4em;
-  color: #7e57c2;
-  line-height: 1.6;
+  color: #666;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-/* File Upload Section */
+/* Center the file upload section */
 .file-upload-section {
-  margin-bottom: 40px;
-}
-
-.drag-drop-area {
-  border: 3px dashed #b39ddb; /* Dashed purple */
-  border-radius: 15px;
-  padding: 60px 30px;
-  text-align: center;
-  cursor: pointer;
-  transition: border-color 0.3s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+}
+
+.drag-drop-area {
+  width: 100%;
+  max-width: 600px;
+  min-height: 200px;
+  border: 2px dashed #673ab7;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background-color: rgba(103, 58, 183, 0.05);
+  transition: all 0.3s ease;
+  margin: 0 auto;
 }
 
 .drag-drop-area:hover {
-  border-color: #673ab7; /* Darker purple */
+  background-color: rgba(103, 58, 183, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(103, 58, 183, 0.15);
 }
 
-.drag-drop-area .upload-icon {
-  font-size: 4em;
-  color: #7e57c2;
-  margin-bottom: 20px;
-  transition: transform 0.3s ease;
-}
-
-.drag-drop-area:hover .upload-icon {
-  transform: scale(1.1);
+.upload-icon {
+  font-size: 3rem;
+  color: #673ab7;
+  margin-bottom: 15px;
 }
 
 .drag-drop-area p {
-  font-size: 1.3em;
-  color: #7e57c2;
-  margin-bottom: 10px;
-}
-
-/* Button Styles */
-.browse-button,
-.folder-button {
-  background-color: #673ab7; /* Primary purple */
-  border: none;
-  border-radius: 10px;
-  color: white;
-  cursor: pointer;
-  font-size: 1.2em;
-  padding: 18px 35px;
-  transition:
-    background-color 0.3s ease,
-    transform 0.2s ease;
-  margin: 10px;
-}
-
-.browse-button:hover,
-.folder-button:hover {
-  background-color: #512da8; /* Darker purple */
-  transform: scale(1.05);
-}
-
-/* Selected Files List */
-.selected-files-list {
-  margin-top: 20px;
-}
-
-.file-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 20px;
-  border-radius: 10px;
-  background-color: #f3e5f5; /* Light purple */
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
-  margin-bottom: 10px;
-  transition: transform 0.2s ease;
-}
-
-.file-item:hover {
-  transform: translateY(-3px);
-}
-
-.file-item .file-icon {
-  margin-right: 10px;
-  color: #7e57c2;
-}
-
-.remove-file-button {
-  background-color: #e57373; /* Soft red */
-  border: none;
-  border-radius: 10px;
-  color: white;
-  cursor: pointer;
-  font-size: 1em;
-  padding: 12px 18px;
-  transition: background-color 0.3s ease;
-}
-
-.remove-file-button:hover {
-  background-color: #d32f2f; /* Darker red */
-}
-
-/* Job Description Section */
-.job-description-section {
-  margin-bottom: 40px;
-}
-
-.job-description-section h2 {
-  color: #5e35b1; /* Dark purple */
-  font-size: 2em;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.job-description-section textarea {
-  border: 2px solid #b39ddb;
-  border-radius: 12px;
-  font-size: 1.1em;
-  padding: 20px;
-  width: 100%;
-  resize: vertical;
-  box-sizing: border-box;
-  min-height: 150px;
-}
-
-/* Upload and Analyze Section */
-.upload-analyze-section {
+  margin: 15px 0;
+  color: #555;
+  font-size: 1.1rem;
   text-align: center;
 }
 
-.error-message {
-  background-color: #ffcdd2;
-  border-radius: 10px;
-  color: #c62828;
-  margin-bottom: 25px;
-  padding: 15px;
-  font-weight: 500;
-}
-
-.analyze-button {
-  background-color: #7e57c2; /* Secondary purple */
-  border: none;
-  border-radius: 12px;
-  color: white;
-  cursor: pointer;
-  font-size: 1.4em;
-  font-weight: 500;
-  padding: 20px 40px;
-  transition:
-    background-color 0.3s ease,
-    transform 0.2s ease;
-  display: inline-flex;
-  align-items: center;
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
   justify-content: center;
 }
 
-.analyze-button:hover {
-  background-color: #673ab7; /* Primary purple */
-  transform: scale(1.05);
+.styled-button {
+  background-color: #673ab7;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(103, 58, 183, 0.3);
 }
 
-.analyze-button svg {
-  margin-left: 10px;
+.styled-button:hover {
+  background-color: #5e35b1;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(103, 58, 183, 0.4);
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .file-upload-container {
-    padding: 30px;
-    width: 95%;
-  }
+.styled-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(103, 58, 183, 0.3);
+}
 
+/* For the selected files list */
+.selected-files-list {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
   .hero-section h1 {
-    font-size: 2.6em;
+    font-size: 1.8rem;
   }
 
   .hero-section p {
-    font-size: 1.2em;
+    font-size: 1rem;
   }
 
-  .drag-drop-area {
-    padding: 40px 20px;
+  .button-group {
+    flex-direction: column;
+    width: 100%;
   }
 
-  .drag-drop-area p {
-    font-size: 1.1em;
-  }
-
-  .browse-button,
-  .folder-button {
-    font-size: 1em;
-    padding: 15px 25px;
-  }
-
-  .job-description-section textarea {
-    font-size: 1em;
-    padding: 15px;
-  }
-
-  .analyze-button {
-    font-size: 1.2em;
-    padding: 15px 30px;
+  .styled-button {
+    width: 100%;
+    justify-content: center;
   }
 }

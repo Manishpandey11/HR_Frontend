@@ -1,0 +1,385 @@
+/* InterviewTracking.css - Enhanced for industry standards */
+
+/* Base Container */
+.interview-tracking {
+  padding: 1.25rem;
+  max-width: 75rem; /* 1200px */
+  margin: 0 auto;
+  color: var(--text-primary, #333);
+  font-family: var(
+    --font-family,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    sans-serif
+  );
+}
+
+/* Header Components */
+.interview-tracking__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.interview-tracking__title {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--title-color, #292929);
+}
+
+/* Navigation Tabs */
+.interview-tracking__tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border-color, #ddd);
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.interview-tracking__tab {
+  padding: 0.625rem 0.9375rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  white-space: nowrap;
+}
+
+.interview-tracking__tab:hover {
+  background-color: var(--hover-bg, #f5f5f5);
+}
+
+.interview-tracking__tab--active {
+  border-bottom: 3px solid var(--primary-color, #673ab7);
+  color: var(--primary-color, #673ab7);
+  font-weight: 700;
+}
+
+/* Card Components */
+.stage-card {
+  border-radius: 0.5rem;
+  padding: 0.9375rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.9375rem;
+  background-color: white;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stage-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+}
+
+.stage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.625rem;
+}
+
+.stage-title {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.stage-count {
+  background-color: var(--badge-bg, #e0e0e0);
+  border-radius: 1.25rem;
+  padding: 0.1875rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* Interview Cards */
+.upcoming-card {
+  border-radius: 0.5rem;
+  padding: 0.9375rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.9375rem;
+  background-color: white;
+  border-left: 4px solid var(--info-color, #03a9f4);
+  transition: transform 0.2s;
+}
+
+.upcoming-card:hover {
+  transform: translateY(-2px);
+}
+
+.upcoming-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.625rem;
+}
+
+.upcoming-name {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.upcoming-date {
+  color: var(--info-color, #03a9f4);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+}
+
+.recent-card {
+  border-radius: 0.5rem;
+  padding: 0.9375rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 0.9375rem;
+  background-color: white;
+  border-left: 4px solid var(--secondary-color, #9c27b0);
+  transition: transform 0.2s;
+}
+
+.recent-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Status Elements */
+.stage-pill {
+  display: inline-block;
+  padding: 0.1875rem 0.625rem;
+  border-radius: 1.25rem;
+  font-size: 0.8rem;
+  color: white;
+  margin-right: 0.625rem;
+  font-weight: 500;
+}
+
+/* Links */
+.candidate-link {
+  color: var(--primary-color, #673ab7);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3125rem;
+  transition: color 0.2s;
+  font-weight: 500;
+}
+
+.candidate-link:hover {
+  color: var(--primary-dark, #5e35b1);
+  text-decoration: underline;
+}
+
+.candidate-link-container {
+  margin-top: 0.625rem;
+  text-align: right;
+}
+
+/* Loading States */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3.125rem;
+  background-color: var(--bg-light, #f8f8f8);
+  border-radius: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.loading-icon {
+  font-size: 2em;
+  margin-bottom: 0.9375rem;
+  color: var(--primary-color, #673ab7);
+}
+
+.error-icon {
+  font-size: 2em;
+  margin-bottom: 0.9375rem;
+  color: var(--error-color, #e53935);
+}
+
+.retry-button {
+  margin-top: 0.9375rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color, #673ab7);
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-weight: 500;
+}
+
+.retry-button:hover {
+  background-color: var(--primary-dark, #5e35b1);
+}
+
+/* Layout */
+.stages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17.5rem, 1fr));
+  gap: 0.9375rem;
+}
+
+.flex-container {
+  display: flex;
+  gap: 0.9375rem;
+}
+
+.left-column {
+  flex: 2;
+}
+
+.right-column {
+  flex: 1;
+}
+
+/* Progress Bar */
+.progress-bar-container {
+  margin: 1.25rem 0 1.875rem 0;
+}
+
+.progress-bar {
+  display: flex;
+  width: 100%;
+  height: 1.875rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  border: 1px solid var(--border-color, #ddd);
+}
+
+.progress-bar-segment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 0.3125rem;
+  transition: width 0.5s ease;
+}
+
+/* Typography */
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 1.25rem 0 0.9375rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--title-color, #292929);
+}
+
+.recent-update-info {
+  font-size: 0.8rem;
+  color: var(--text-secondary, #757575);
+  margin-bottom: 0.3125rem;
+}
+
+.recent-card-name {
+  font-weight: 700;
+}
+
+.stage-margin {
+  margin: 0.3125rem 0;
+}
+
+/* Print Styles */
+@media print {
+  .interview-tracking__tabs,
+  .retry-button,
+  .candidate-link {
+    display: none;
+  }
+
+  .interview-tracking {
+    padding: 0;
+  }
+
+  .stage-card,
+  .upcoming-card,
+  .recent-card {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    break-inside: avoid;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .progress-bar-segment {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .flex-container {
+    flex-direction: column;
+  }
+
+  .tracking-tabs {
+    overflow-x: auto;
+  }
+
+  .upcoming-header {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .interview-tracking {
+    padding: 0.625rem;
+  }
+
+  .interview-tracking__title {
+    font-size: 1.25rem;
+  }
+
+  .section-title {
+    font-size: 1rem;
+  }
+
+  .progress-bar {
+    height: 1.5rem;
+  }
+
+  .stages-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Focus and Accessibility */
+.interview-tracking__tab:focus,
+.candidate-link:focus,
+.retry-button:focus {
+  outline: 2px solid var(--primary-color, #673ab7);
+  outline-offset: 2px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.stage-card,
+.upcoming-card,
+.recent-card {
+  animation: fadeIn 0.3s ease-in-out;
+}
